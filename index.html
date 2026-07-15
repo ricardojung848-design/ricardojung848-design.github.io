@@ -3,30 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AEGIS – KI-Tools & Produktempfehlungen</title>
+    <title>AEGIS – Top Produktempfehlungen nach Budget</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; 
-            padding: 20px; 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
+            padding: 20px;
             min-height: 100vh;
         }
-        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        h1 { color: #667eea; margin-top: 0; }
-        p { line-height: 1.8; color: #666; font-size: 16px; }
-        .coming-soon { background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; margin-top: 20px; border-radius: 4px; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .category-title {
+            font-size: 1.3em;
+            color: white;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            grid-column: 1 / -1;
+        }
+        .category-10 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .category-100 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .category-1000 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .product-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            border-color: #667eea;
+        }
+        .product-name {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .product-price {
+            font-size: 1.8em;
+            color: #f5576c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .product-features {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .product-features li {
+            margin-left: 20px;
+            margin-bottom: 8px;
+        }
+        .btn-affiliate {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05em;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+        .btn-affiliate:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .disclaimer {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 4px;
+            color: #856404;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🤖 AEGIS – KI-Tools & Produktempfehlungen</h1>
-        <p>Entdecke die besten AI-Tools, Gadgets und Produktivitätslösungen für deine Arbeit.</p>
-        <p>Ich teste und empfehle nur Produkte, die ich selbst nutze und liebe.</p>
-        <div class="coming-soon">
-            <strong>⏳ Affiliate-Links folgen in Kürze...</strong><br>
-            Empfohlene Produkte von Amazon (mit Affiliate-Links)
+        <h1>🤖 AEGIS – Top Produktempfehlungen</h1>
+        <p class="subtitle">Getestete Favoriten nach Budget – für jedes Anforderung</p>
+
+        <div class="categories">
+            <h2 class="category-title category-10">💚 10€-KATEGORIE (Impulskäufe)</h2>
+            <div class="product-card">
+                <div class="product-name">RAVIAD USB-C → Lightning Kabel</div>
+                <div class="product-price">€5.20</div>
+                <ul class="product-features">
+                    <li>✅ Apple MFi-zertifiziert</li>
+                    <li>✅ Nylon-Geflecht (extra langlebig)</li>
+                    <li>✅ 1m, 2m, 3m verfügbar</li>
+                    <li>✅ Schnellladung bis 100W</li>
+                </ul>
+                <a href="https://amazon.de/dp/B0D5X5Y5ZX?tag=aegis21-21" target="_blank" rel="noopener noreferrer" class="btn-affiliate">Auf Amazon ansehen</a>
+            </div>
+
+            <h2 class="category-title category-100">💛 100€-KATEGORIE (Best Value)</h2>
+            <div class="product-card">
+                <div class="product-name">Xiaomi Redmi Watch 5 Lite</div>
+                <div class="product-price">€43-47</div>
+                <ul class="product-features">
+                    <li>✅ 1.98" AMOLED-Display</li>
+                    <li>✅ 18 Tage Akku</li>
+                    <li>✅ Bluetooth-Anrufe</li>
+                    <li>✅ Gesundheits-Tracking</li>
+                    <li>✅ Amazon #1 Budget-Smartwatch</li>
+                </ul>
+                <a href="https://amazon.de/dp/B0DDY56M4B?tag=aegis21-21" target="_blank" rel="noopener noreferrer" class="btn-affiliate">Auf Amazon ansehen</a>
+            </div>
+
+            <h2 class="category-title category-1000">🔴 1000€+-KATEGORIE (Premium)</h2>
+            <div class="product-card">
+                <div class="product-name">Samsung Odyssey G5 Gaming Monitor</div>
+                <div class="product-price">€800-950</div>
+                <ul class="product-features">
+                    <li>✅ 32" Curved Display (1000R)</li>
+                    <li>✅ 2560x1440 QHD</li>
+                    <li>✅ 165Hz Refresh Rate</li>
+                    <li>✅ #1 Premium Gaming Monitor</li>
+                    <li>✅ Perfect für Streaming & Gaming</li>
+                </ul>
+                <a href="https://amazon.de/dp/B0C6NLVMYP?tag=aegis21-21" target="_blank" rel="noopener noreferrer" class="btn-affiliate">Auf Amazon ansehen</a>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <strong>⚠️ Affiliate-Hinweis:</strong> Dies ist eine Affiliate-Website. Die Links enthalten meine Amazon-Partnernummer. Für dich entstehen keine Zusatzkosten, aber ich erhalte eine kleine Provision.
         </div>
     </div>
 </body>
