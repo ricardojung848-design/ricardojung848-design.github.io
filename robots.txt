@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ricardojung848-design.github.io/sitemap.xml
